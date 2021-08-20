@@ -12,8 +12,8 @@ public class SomeController {
         return "hello world spring boot";
     }
 
-    @GetMapping("/find/{id}")
-    public String findHandler(@PathVariable("id") int id){
-        return "查询指定的学生："+id;
+    @GetMapping("/find/{name}")
+    public String findHandler(@PathVariable("name") String name){
+        return "查询指定的学生："+name;
     }
 }

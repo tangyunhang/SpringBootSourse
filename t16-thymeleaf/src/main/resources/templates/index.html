@@ -11,12 +11,15 @@
     <hr>
     <p th:text="${student}">这里显示数据：但这些文字不显示</p>
     <p th:text="${student.name}">这里显示数据：但这些文字不显示</p>
-    <p th:text="${student.ages}">这里显示数据：但这些文字不显示</p>
+    <p th:text="${student.age}">这里显示数据：但这些文字不显示</p>
     <hr>
     <div th:object="${student}">
         <p th:text="*{name}">这里显示数据：但这些文字不显示</p>
-        <p th:text="*{ages}">这里显示数据：但这些文字不显示</p>
+        <p th:text="*{age}">这里显示数据：但这些文字不显示</p>
     </div>
-    <a th:href="@{|http://localhost:8080/xxxx/test/index?name=${student.name}|}">查询1</a>
+    <hr>
+    <a th:href="@{|http://localhost:8080/xxxx/find?name=${student.name}|}">查询1</a>
+    <a th:href="@{|http://localhost:8080/xxxx/find?name=${student.name}&age=${student.age}|}">查询2</a>
+    <a th:href="@{'http://localhost:8888/tyh/find/'+${student.name}}">查询t1</a>
 </body>
 </html>

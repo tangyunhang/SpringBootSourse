@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Student {
     private String name;
-    private int ages;
+    private int age;
 }
