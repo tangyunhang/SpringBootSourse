@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <p th:text="${welcome}">这里显示数据：但这些文字不显示</p>
+    <div th:text="${welcome}">这里显示数据：但这些文字不显示</div>
+    <span th:text="${welcome}">这里显示数据：但这些文字不显示</span>
+    <hr>
+    <p th:text="${student}">这里显示数据：但这些文字不显示</p>
+    <p th:text="${student.name}">这里显示数据：但这些文字不显示</p>
+    <p th:text="${student.ages}">这里显示数据：但这些文字不显示</p>
+    <hr>
+    <div th:object="${student}">
+        <p th:text="*{name}">这里显示数据：但这些文字不显示</p>
+        <p th:text="*{ages}">这里显示数据：但这些文字不显示</p>
+    </div>
+    <a th:href="@{|http://localhost:8080/xxxx/test/index?name=${student.name}|}">查询1</a>
+</body>
+</html>
