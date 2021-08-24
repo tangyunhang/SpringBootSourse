@@ -9,22 +9,15 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.abc</groupId>
-    <artifactId>t01-primary</artifactId>
+    <artifactId>t15-Filter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>t01-primary</name>
+    <name>t15-Filter</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
         <docker.image.prefix>tyh</docker.image.prefix>
     </properties>
     <dependencies>
-        <!--lombok依赖-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
