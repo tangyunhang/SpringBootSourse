@@ -20,8 +20,8 @@ public class Some2Comtroller {
     private StudentService studentService;
 
     @PostMapping("/register")
-    public String someHandler(User student , Model model) throws Exception{
-        //studentService.addStudent(student);
+    public String someHandler(Student student , Model model) throws Exception{
+        studentService.addStudent(student);
         model.addAttribute("student",student);
         return "jsp/welcome";
     }
