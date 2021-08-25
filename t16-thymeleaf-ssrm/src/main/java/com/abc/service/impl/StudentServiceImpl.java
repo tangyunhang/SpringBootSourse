@@ -27,7 +27,7 @@ public class StudentServiceImpl implements StudentService {
     //采用spring默认事务提交：发生运行时异常回滚，发生受查异常提交
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public void addStudent(Student student) throws Exception {
+    public void addStudent(Student student){
         studentDao.insertStudent(student);
     }
 
@@ -65,5 +65,11 @@ public class StudentServiceImpl implements StudentService {
             }
         }
         return (Integer) count;
+    }
+
+    @Cacheable(value = "realTimeCache", key = "'student_'+#id")
+    @Override
+    public Student findStudentsById(int id) {
+        return  studentDao.selectStudentsById(id);
     }
 }

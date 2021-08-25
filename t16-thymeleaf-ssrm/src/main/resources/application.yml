@@ -1,7 +1,7 @@
 server:
-  port: 8888
+  port: 8080
   servlet:
-    context-path: /tyh
+    context-path: /xxx
 
 mybatis:
   #注册映射文件
@@ -27,14 +27,6 @@ spring:
   redis:
     host: localhost
     port: 16379
-    #连接Redis高可用集群（哨兵模式）
-#    sentinel:
-#      master: mymaster
-#      nodes: sentinel1:16379,sentinel2:16380
-    #非哨兵模式
-#    cluster:
-#      nodes: localhost:16380,localhost:16381,localhost:16382
-
   cache:
 #    指定当前应用所使用的缓存类型
     type: redis
@@ -47,5 +39,4 @@ logging:
   pattern:
     console: log-%level %msg%n
   level:
-    root: warn
     com.abc.dao: debug

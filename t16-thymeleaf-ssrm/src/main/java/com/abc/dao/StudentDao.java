@@ -12,4 +12,6 @@ public interface StudentDao {
     List<Student> selectStudentsByAge(int age);
 
     Integer selectStudentCount();
+
+    Student selectStudentsById(int id);
 }

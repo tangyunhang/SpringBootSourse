@@ -18,10 +18,10 @@
         <docker.image.prefix>tyh</docker.image.prefix>
     </properties>
     <dependencies>
+        <!--thymeleaf依赖-->
         <dependency>
-            <groupId>com.abc</groupId>
-            <artifactId>t12-dubbo-commons</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <!--redis 与 spring boot 整合依赖-->
         <dependency>
@@ -51,11 +51,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-        </dependency>
-        <!--jasper依赖，用于解析JSP页面-->
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
