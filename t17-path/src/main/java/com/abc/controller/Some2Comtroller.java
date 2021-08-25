@@ -34,8 +34,7 @@ public class Some2Comtroller {
     public List<Student> findHandler(int age) {
         return studentService.findStudentsByAge(age);
     }
-
-    @PostMapping("/findId")
+    @RequestMapping("/findId")
     public String findIdHandle(int id,Model model) {
         Student student = studentService.findStudentsById(id);
         model.addAttribute("student",student);
