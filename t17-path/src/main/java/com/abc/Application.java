@@ -14,8 +14,8 @@ import org.springframework.context.ApplicationListener;
 public class Application {
 
     public static void main(String[] args) {
-        //SpringApplication.run(Application.class, args);
-        SpringApplication springApplication=new SpringApplication(Application.class);
+        SpringApplication.run(Application.class, args);
+       /* SpringApplication springApplication=new SpringApplication(Application.class);
         springApplication.addListeners((ApplicationListener<ApplicationStartingEvent>) event->{
             System.out.println("Starting");
         });
@@ -45,7 +45,7 @@ public class Application {
 
 
 
-        springApplication.run(args);
+        springApplication.run(args);*/
     }
 
 }
