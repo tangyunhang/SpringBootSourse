@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class T21HomeworkApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(T21HomeworkApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
